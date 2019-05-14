@@ -60,6 +60,8 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript tabstop=2
 set wrap
 " vimdiff忽略行尾的空格(自然包括全空格的行)
 set diffopt+=iwhite
+" 回退
+" set backspace=indent,eol,start
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
@@ -146,6 +148,8 @@ let g:ycm_key_list_select_completion = ['<C-n>']
 let g:ycm_key_list_previous_completion = ['<C-p>']
 " 开启 YCM 基于标签引擎
 let g:ycm_collect_identifiers_from_tags_files=1
+" 关闭上方提示栏
+autocmd InsertLeave * pclose
 " 从第2个键入字符就开始罗列匹配项
 let g:ycm_min_num_of_chars_for_completion=2	
 " 语法关键字补全
